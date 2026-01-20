@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, <span th:text="${username}">User</span>!</h1>
+
+    <p>This is a minimal Spring Boot + Security + Thymeleaf skeleton.</p>
+
+    <div th:if="${#authentication?.name != null}">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+    <div th:if="${#authentication == null}">
+        <a th:href="@{/login}">Login</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+body { font-family: Arial, Helvetica, sans-serif; padding: 40px; }
+.container { max-width: 600px; margin: auto; }
+input { display:block; margin-bottom:10px; padding:8px; width:100%; box-sizing:border-box; }
+button { padding:8px 12px; }
